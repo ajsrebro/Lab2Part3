@@ -5,7 +5,7 @@ total_amount = 0
 repeat = ''
 while True:
     product = input('What is your product : ')
-    unit_price = Invoice().inputNumber("Please enter unti price : ")
+    unit_price = Invoice().inputNumber("Please enter unit price : ")
     qnt = Invoice().inputNumber("Please enter quantity of product : ")
     discount = Invoice().inputNumber("Discount percent (%) : ")
     repeat = Invoice().inputAnswer("Another  product? (y,n) : ")
@@ -17,4 +17,4 @@ while True:
 total_amount = Invoice().totalPurePrice(products)
 
 
-print("Your total pure price is: ", total_amount)
+print("The total price for " + str(Invoice().totalQuantity(products)) + " items is : ", total_amount)
